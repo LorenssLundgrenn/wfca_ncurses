@@ -14,7 +14,7 @@ LFLAGS = -lncursesw
 ifeq ($(OS), Windows_NT)
     # MSYS2/Windows settings
     LIBS = -LC:/msys64/mingw64/lib
-    INCLUDES += -IC:/msys64/mingw64/include
+    INCLUDES += -IC:/msys64/mingw64/include/ncursesw
 else
     # Arch Linux settings
     LIBS = -L/usr/lib
