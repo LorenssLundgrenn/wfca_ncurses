@@ -7,7 +7,7 @@
 #include <bitset>
 #include <string>
 
-extern std::map<E_Item, std::bitset<4>> item_cardinal_connector;
-extern std::map<E_Item, std::string> character_connector;
+extern std::map<E_Item, int> cardinal_connector;
+extern std::map<E_Item, wchar_t> character_connector;
 
 #endif

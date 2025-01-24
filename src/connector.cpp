@@ -1,24 +1,22 @@
-#include <connector.h>
-#include <enumerations.h>
+#include "connector.h"
+#include "enumerations.h"
 
-std::map<E_Item, std::bitset<4>> item_connector {
-    { H_BAR, 0b0011 },
-    { V_BAR, 0b1100 },
-    { TLF_CRN, 0b0101 },
-    { TRG_CRN, 0b0110 },
-    { BLF_CRN, 0b1001 },
-    { BRG_CRN, 0b1010 },
-    { JUNCT, 0b1111 },
-    { EMPTY, 0b1111 }
+std::map<E_Item, int> cardinal_connector {
+    { H_BAR, EAST | WEST },
+    { V_BAR, NORTH | SOUTH },
+    { TLF_CRN, SOUTH | EAST },
+    { TRG_CRN, SOUTH | WEST },
+    { BLF_CRN, NORTH | EAST },
+    { BRG_CRN, NORTH | WEST },
+    { JUNCT, NORTH | SOUTH | WEST | EAST }
 };
 
-std::map<E_Item, std::string> character_connector {
-    { H_BAR, "═" },
-    { V_BAR, "║" },
-    { TLF_CRN, "╔" },
-    { TRG_CRN, "╗" },
-    { BLF_CRN, "╚" },
-    { BRG_CRN, "╝" },
-    { JUNCT, "╬" },
-    { EMPTY, " " }
+std::map<E_Item, wchar_t> character_connector {
+    { H_BAR, L'─' },
+    { V_BAR, L'│' },
+    { TLF_CRN, L'┌' },
+    { TRG_CRN, L'┐' },
+    { BLF_CRN, L'└' },
+    { BRG_CRN, L'┘' },
+    { JUNCT, L'┼' }
 };

@@ -9,7 +9,15 @@ enum E_Item {
     BLF_CRN,
     BRG_CRN,
     JUNCT,
-    EMPTY
+    
+    N_ITEMS
+};
+
+enum E_Cardinal {
+    NORTH = 0b1000,
+    SOUTH = 0b0100,
+    WEST = 0b0010,
+    EAST = 0b0001
 };
 
 #endif

@@ -7,7 +7,7 @@ OBJ_DIR = obj
 BIN_DIR = bin
 SHARED_DIR = shared
 
-LIBS = 
+LIBS =
 INCLUDES = -I${INCLUDE_DIR}
 LFLAGS = -lncursesw
 
